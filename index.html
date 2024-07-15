@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ active: 'About Us', displayText: 'BRIGADA' }" class="bg-[#000000]">
+    <div class="w-[100vw] h-[100vh] overflow-hidden relative gradient flex justify-center items-center gap-[14px] flex-col">
+        <p class="tracking-tighter font-medium text-[40px] text-white">Creative Tech Development Studio</p>
+        <h1 class="tracking-tighter font-semibold text-[240px] h-[240px] text-white leading-[240px] decoding" x-text="displayText"></h1>
+        <img class="absolute left-0 top-[-50%] mix-blend-soft-light w-[60vw]" src="./logo_bg.svg" alt="Logo Background" title="Logo Background">
+        <div id="stickyNav" class="rounded-[40px] bg-black flex gap-6 py-4 px-[34px] border-2 border-solid border-[#373946] z-10 text-[#525254]">
+            <span :class="{ 'active': active === 'About Us' }" @click="active = 'About Us'; typeWriterText('BRIGADA')" class="hover-white cursor-pointer">About Us</span>
+            <span>|</span>
+            <span :class="{ 'active': active === 'Our Work' }" @click="active = 'Our Work'; typeWriterText('Our Work')" class="hover-white cursor-pointer">Our Work</span>
+            <span>|</span>
+            <span :class="{ 'active': active === 'Contact' }" @click="active = 'Contact'; typeWriterText('Contact Us')" class="hover-white cursor-pointer">Contact</span>
+        </div>
+    </div>
+    <div x-show="active === 'About Us'" x-transition.delay.1000ms class="flex flex-col overflow-hidden">
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+            <p class="tracking-tighter text-[72px] text-white leading-[64px] text-center max-w-[80vw]">We are a dynamic tech studio with a focus in AI engineering and innovative software development.</p>
+            <div class="min-w-[80vw] min-h-[40vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 left-[50%] -translate-x-1/2"></div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
+            <div class="flex flex-col items-center mb-[133px]">
+                <p class="text-white text-[24px] font-medium mb-4">Our Expertise</p>
+                <h2 class="text-white text-[152px] font-medium">Creative & Code</h2>
+            </div>
+            <div class="max-w-[1200px] flex justify-between w-full">
+                <div>
+                    <p class="text-white font-medium text-[24px] mb-[43px]">Redefining great engineering.</p>
+
+                    <p class="text-[#75778B] font-medium text-[24px] max-w-[500px]">Our company specializes in AI engineering, UI/UX design and innovative software development, delivering tailored solutions to meet diverse client needs across various industries.</p>
+                </div>
+                <div>
+                    <div class="pt-[21px] mb-[51px] border-t-2 border-[#75778B]">
+                        <p class="text-white font-medium text-[32px] text-right">Software Engineering</p>
+                        <p class="text-[#75778B] font-medium text-[24px] text-right">Creating and functionalizing systems</p>
+                    </div>
+                    <div class="pt-[21px] mb-[51px] border-t-2 border-[#75778B]">
+                        <p class="text-white font-medium text-[32px] text-right">AI Development</p>
+                        <p class="text-[#75778B] font-medium text-[24px] text-right">Machine Learning and Model Training</p>
+                    </div>
+                    <div class="pt-[21px] mb-[51px] border-t-2 border-[#75778B]">
+                        <p class="text-white font-medium text-[32px] text-right">UI/UX Design</p>
+                        <p class="text-[#75778B] font-medium text-[24px] text-right">Intuitive and engaging User Experiences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+            <div class="w-[100px] h-[100px] bg-[#FCC188] blur-[90px] absolute top-0 left-0">
+
+            </div>
+            <p class="text-[72px] text-white font-medium max-w-[1200px] text-center">
+                Aside from working on international projects, our team is also dedicated to advance modern education locally.
+            </p>
+            <div class="w-[600px] h-[700px] rounded-full bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex flex-col justify-end items-center relative">
+            <p class="font-medium text-[24px] text-[#837BE1]">The First Albanian Programming Platform</p>
+            <h2 class="text-[80px] 2xl:text-[130px] text-white font-medium">Code in your language.</h2>
+            <div class="w-[80vw] h-[50vh] bg-[#361A62] mt-[120px]">
+
+            </div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center gap-[40px] relative">
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_1.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Niche Solutions</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_2.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Unicorn AI</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_3.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Police Reports AI</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_4.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">United Nations Kosovo</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_5.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Cargo Poster</span>
+            </div>
+            <div class="min-w-[40vw] min-h-[20vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 right-0 translate-x-1/2"></div>
+        </div>
+    </div>
+    <div x-show="active === 'Our Work'" x-transition.delay.1000ms class="flex flex-col overflow-hidden">
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+            <p class="tracking-tighter text-[72px] text-white leading-[64px] text-center max-w-[80vw]">Evolving with the tech landscape, we focus on AI, software development, and more to create innovative and seamless solutions for our clients.</p>
+            <div class="min-w-[80vw] min-h-[40vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 left-[50%] -translate-x-1/2"></div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
+            <div class="flex flex-col items-center mb-[133px]">
+                <p class="text-white text-[24px] font-medium mb-4">Project</p>
+                <h2 class="text-white text-[152px] font-medium">Niche Solutions</h2>
+            </div>
+            <div class="max-w-[1300px] flex justify-between w-full">
+                <div>
+                    <p class="text-white font-medium text-[24px] mb-[43px]">Python Scraping</p>
+                    <p class="text-[#75778B] font-medium text-[24px] max-w-[500px]">Collecting real estate data from various sources to compile thousands of potential property investments into a centralized database.</p>
+                </div>
+                <div>
+                    <p class="text-white font-medium text-[24px] mb-[43px]">AI Development</p>
+                    <p class="text-[#75778B] font-medium text-[24px] max-w-[500px]">We are developing AI software and a Large Language Model for efficient, accurate, and refined outputs. With a focus on enhanc-ing accuracy for our client. </p>
+                </div>
+                <div>
+                    <p class="text-white font-medium text-[24px] mb-[43px]">Salesforce Development</p>
+                    <p class="text-[#75778B] font-medium text-[24px] max-w-[500px]">Building a team around Salesforce services to improve CRM and automate various internal and external services.</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+            <div class="w-[100px] h-[100px] bg-[#FCC188] blur-[90px] absolute top-0 left-0">
+
+            </div>
+            <p class="text-[72px] text-white font-medium max-w-[1200px] text-center">
+                Aside from working on international projects, our team is also dedicated to advance modern education locally.
+            </p>
+            <div class="w-[600px] h-[700px] rounded-full bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex flex-col justify-end items-center relative">
+            <p class="font-medium text-[24px] text-[#837BE1]">The First Albanian Programming Platform</p>
+            <h2 class="text-[80px] 2xl:text-[130px] text-white font-medium">Code in your language.</h2>
+            <div class="w-[80vw] h-[50vh] bg-[#361A62] mt-[120px]">
+
+            </div>
+        </div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center gap-[40px] relative">
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_1.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Niche Solutions</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_2.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Unicorn AI</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_3.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Police Reports AI</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_4.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">United Nations Kosovo</span>
+            </div>
+            <div class="flex flex-col gap-[70px] items-center">
+                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
+                    <img src="./logo_5.png" alt="Niche">
+                </div>
+
+                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Cargo Poster</span>
+            </div>
+            <div class="min-w-[40vw] min-h-[20vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 right-0 translate-x-1/2"></div>
+        </div>
+    </div>
+    <script>
+        function scrollToBottom(pixels, duration) {
+            const startPosition = window.pageYOffset;
+            const targetPosition = startPosition + pixels;
+            const startTime = performance.now();
+          
+            function animateScroll(currentTime) {
+              const elapsedTime = currentTime - startTime;
+              const progress = elapsedTime / duration;
+          
+              if (progress < 1) {
+                window.scrollTo(0, startPosition + pixels * easeInOutQuad(progress));
+                requestAnimationFrame(animateScroll);
+              } else {
+                window.scrollTo(0, targetPosition);
+              }
+            }
+          
+            function easeInOutQuad(t) {
+              return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            }
+          
+            requestAnimationFrame(animateScroll);
+          }
+          
+        function scrollToTop(duration) {
+            const startPosition = window.pageYOffset;
+            const startTime = performance.now();
+          
+            function animateScroll(currentTime) {
+              const elapsedTime = currentTime - startTime;
+              const progress = elapsedTime / duration;
+          
+              if (progress < 1) {
+                window.scrollTo(0, startPosition * (1 - easeInOutQuad(progress)));
+                requestAnimationFrame(animateScroll);
+              } else {
+                window.scrollTo(0, 0);
+              }
+            }
+          
+            function easeInOutQuad(t) {
+              return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            }
+          
+            requestAnimationFrame(animateScroll);
+          }
+          
+        window.addEventListener('scroll', function() {
+            const stickyNav = document.getElementById('stickyNav');
+    
+            if (window.scrollY > window.screen.height) {
+                stickyNav.classList.add('sticky-top');
+            } else {
+                stickyNav.classList.remove('sticky-top');
+            }
+        });
+        function typeWriterText(text) {
+            document.body.classList.add('no-scroll');
+            scrollToTop(900);
+            const element = document.querySelector('.decoding');
+            let i = 0;
+            element.textContent = '';
+            const interval = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 100);
+            setTimeout(() => {
+                scrollToBottom(400, 1000);
+            }, 1000)
+            setTimeout(() => {
+                document.body.classList.remove('no-scroll');
+            }, 2100)
+        }
+    </script>
+</body>
+</html>
