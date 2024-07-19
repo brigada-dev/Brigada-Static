@@ -12,7 +12,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body x-data="{ active: 'About Us', displayText: 'BRIGADA' }" class="bg-[#000000]">
-    <div class="w-[100vw] h-[100vh] overflow-hidden relative gradient flex justify-center items-center gap-[14px] flex-col">
+    <section class="w-[100vw] h-[100vh] overflow-hidden relative gradient flex justify-center items-center gap-[14px] flex-col">
         <p class="tracking-tighter font-medium text-[40px] text-white">Creative Tech Development Studio</p>
         <h1 class="tracking-tighter font-semibold text-[240px] h-[240px] text-white leading-[240px] decoding" x-text="displayText"></h1>
         <img class="absolute left-0 top-[-50%] mix-blend-soft-light w-[60vw]" src="./logo_bg.svg" alt="Logo Background" title="Logo Background">
@@ -23,13 +23,13 @@
             <span>|</span>
             <span :class="{ 'active': active === 'Contact' }" @click="active = 'Contact'; typeWriterText('Contact Us')" class="hover-white cursor-pointer">Contact</span>
         </div>
-    </div>
-    <div x-show="active === 'About Us'" x-transition.delay.1000ms class="flex flex-col overflow-hidden">
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+    </section>
+    <div x-show="active === 'About Us'" x-transition.delay.1000ms class="flex flex-col overflow-hidden main">
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center relative">
             <p class="tracking-tighter text-[72px] text-white leading-[64px] text-center max-w-[80vw]">We are a dynamic tech studio with a focus in AI engineering and innovative software development.</p>
             <div class="min-w-[80vw] min-h-[40vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 left-[50%] -translate-x-1/2"></div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
             <div class="flex flex-col items-center mb-[133px]">
                 <p class="text-white text-[24px] font-medium mb-4">Our Expertise</p>
                 <h2 class="text-white text-[152px] font-medium">Creative & Code</h2>
@@ -55,8 +55,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center relative">
             <div class="w-[100px] h-[100px] bg-[#FCC188] blur-[90px] absolute top-0 left-0">
 
             </div>
@@ -64,15 +64,15 @@
                 Aside from working on international projects, our team is also dedicated to advance modern education locally.
             </p>
             <div class="w-[600px] h-[700px] rounded-full bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex flex-col justify-end items-center relative">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex flex-col justify-end items-center relative">
             <p class="font-medium text-[24px] text-[#837BE1]">The First Albanian Programming Platform</p>
             <h2 class="text-[80px] 2xl:text-[130px] text-white font-medium">Code in your language.</h2>
             <div class="w-[80vw] h-[50vh] bg-[#361A62] mt-[120px]">
 
             </div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center gap-[40px] relative">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center gap-[40px] relative">
             <div class="flex flex-col gap-[70px] items-center">
                 <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
                     <img src="./logo_1.png" alt="Niche">
@@ -109,14 +109,14 @@
                 <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Cargo Poster</span>
             </div>
             <div class="min-w-[40vw] min-h-[20vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 right-0 translate-x-1/2"></div>
-        </div>
+        </section>
     </div>
-    <div x-show="active === 'Our Work'" x-transition.delay.1000ms class="flex flex-col overflow-hidden">
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+    <div x-show="active === 'Our Work'" x-transition.delay.1000ms class="flex flex-col overflow-hidden main">
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center relative">
             <p class="tracking-tighter text-[72px] text-white leading-[64px] text-center max-w-[80vw]">Evolving with the tech landscape, we focus on AI, software development, and more to create innovative and seamless solutions for our clients.</p>
             <div class="min-w-[80vw] min-h-[40vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 left-[50%] -translate-x-1/2"></div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
             <div class="flex flex-col items-center mb-[133px]">
                 <p class="text-white text-[24px] font-medium mb-4">Project</p>
                 <h2 class="text-white text-[152px] font-medium">Niche Solutions</h2>
@@ -135,63 +135,115 @@
                     <p class="text-[#75778B] font-medium text-[24px] max-w-[500px]">Building a team around Salesforce services to improve CRM and automate various internal and external services.</p>
                 </div>
             </div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center relative">
             <div class="w-[100px] h-[100px] bg-[#FCC188] blur-[90px] absolute top-0 left-0">
 
             </div>
-            <p class="text-[72px] text-white font-medium max-w-[1200px] text-center">
-                Aside from working on international projects, our team is also dedicated to advance modern education locally.
-            </p>
-            <div class="w-[600px] h-[700px] rounded-full bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex flex-col justify-end items-center relative">
-            <p class="font-medium text-[24px] text-[#837BE1]">The First Albanian Programming Platform</p>
-            <h2 class="text-[80px] 2xl:text-[130px] text-white font-medium">Code in your language.</h2>
-            <div class="w-[80vw] h-[50vh] bg-[#361A62] mt-[120px]">
-
-            </div>
-        </div>
-        <div class="w-[100vw] h-[100vh] flex justify-center items-center gap-[40px] relative">
-            <div class="flex flex-col gap-[70px] items-center">
-                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
-                    <img src="./logo_1.png" alt="Niche">
+            <div class="flex flex-col items-center mb-[133px] max-w-[1300px]">
+                <p class="text-white text-[24px] font-medium mb-4">Project</p>
+                <h2 class="text-white text-[152px] font-medium">Unicorn AI</h2>
+                <p class="mt-20 text-[#75778B] font-medium text-[24px] mb-[120px] text-center max-w-[1000px]">Leading the engineering aspect of an AI-powered platform designed for versatile assistance across text, images, and more. Utilizing advanced algorithms, it generates accurate and coherent outputs in various formats.</p>
+                <div class="w-full flex justify-between">
+                    <h3 class="text-[88px] font-medium text-white text-left w-1/2">Engineering
+                        AI functionality.</h3>
+                    <div class="w-1/2 flex flex-col max-w-[400px] text-left">
+                        <p class="text-white text-[24px] font-medium mb-10">Our Role</p>
+                        <p class="text-[24px] font-medium text-[#75778B]">Our dedicated team leads the entire development process, ensuring seamless integration, and continuous improvement.</p>
+                    </div>
                 </div>
-
-                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Niche Solutions</span>
             </div>
-            <div class="flex flex-col gap-[70px] items-center">
-                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
-                    <img src="./logo_2.png" alt="Niche">
+            <div class="w-[600px] h-[700px] rounded-full mix-blend-plus-lighter bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+            <div class="min-w-[80vw] min-h-[40vh] gradient-circle blur-[174px] rounded-full absolute bottom-[-25%] left-[50%] -translate-x-1/2"></div>
+            <div class="flex flex-col items-center mb-[133px] max-w-[1300px]">
+                <p class="text-white text-[24px] font-medium mb-4">Project</p>
+                <h2 class="text-white text-[152px] font-medium">Police Reports AI</h2>
+                <p class="mt-20 text-[#75778B] font-medium text-[24px] mb-[120px] text-center max-w-[1000px]">We engineered an AI-powered platform specifically for law enforcement report writing. It utilizes advanced algorithms to efficiently produce comprehensive and accurate reports. Our team is leading the entire development and implementation process.</p>
+                <div class="w-full flex justify-between">
+                    <div class="flex flex-col max-w-[220px]">
+                        <p class="text-white text-[96px] font-medium w-full border-b-2 border-[#75778B]">01</p>
+                        <p class="text-[#75778B] text-[24px] font-medium mt-10">Model Training and Optimization</p>
+                    </div>
+                    <div class="flex flex-col max-w-[220px]">
+                        <p class="text-white text-[96px] font-medium w-full border-b-2 border-[#75778B]">02</p>
+                        <p class="text-[#75778B] text-[24px] font-medium mt-10">Algorithm Development</p>
+                    </div>
+                    <div class="flex flex-col max-w-[220px]">
+                        <p class="text-white text-[96px] font-medium w-full border-b-2 border-[#75778B]">03</p>
+                        <p class="text-[#75778B] text-[24px] font-medium mt-10">User Experience Implementation</p>
+                    </div>
+                    <div class="flex flex-col max-w-[220px]">
+                        <p class="text-white text-[96px] font-medium w-full border-b-2 border-[#75778B]">04</p>
+                        <p class="text-[#75778B] text-[24px] font-medium mt-10">Data Collection & Preprocessingn</p>
+                    </div>
                 </div>
-
-                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Unicorn AI</span>
             </div>
-            <div class="flex flex-col gap-[70px] items-center">
-                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
-                    <img src="./logo_3.png" alt="Niche">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center relative">
+            <div class="w-[100px] h-[100px] bg-[#FCC188] blur-[90px] absolute top-0 left-0">
+
+            </div>
+            <div class="flex flex-col items-center mb-[133px] max-w-[1300px]">
+                <p class="text-white text-[24px] font-medium mb-4">Project</p>
+                <h2 class="text-white text-[152px] font-medium">Cargo Poster</h2>
+                <div class="w-full flex justify-between mt-[100px]">
+                    <h3 class="text-[72px] font-medium text-white text-left w-1/2 leading-[110%]">An EU funded software dedicated to connect shippers and carriers.</h3>
+                    <div class="w-1/2 flex flex-col max-w-[400px] text-left ">
+                        <p class="text-white text-[24px] font-medium mb-10">Our Responsibilities</p>
+                        <p class="text-[24px] font-medium text-[#75778B]">
+                            Developing a robust, scalable backend with real-time matching algorithms, secure transactions, and API integration with logistics systems.
+                            <br><br>
+                            Rigorous testing will be conducted to ensure reliability, and a continuous integration pipeline will be established for regular updates and improvements.
+                        </p>
+                    </div>
                 </div>
-
-                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Police Reports AI</span>
             </div>
-            <div class="flex flex-col gap-[70px] items-center">
-                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
-                    <img src="./logo_4.png" alt="Niche">
-                </div>
-
-                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">United Nations Kosovo</span>
-            </div>
-            <div class="flex flex-col gap-[70px] items-center">
-                <div class="rounded-[8px] w-[180px] h-[180px] 2xl:w-[272px] 2xl:h-[272px] flex justify-center items-center border-2 border-[#292A36]">
-                    <img src="./logo_5.png" alt="Niche">
-                </div>
-
-                <span class="font-medium text-[18px] 2xl:text-[24px] text-white">Cargo Poster</span>
-            </div>
-            <div class="min-w-[40vw] min-h-[20vh] gradient-circle blur-[174px] rounded-full absolute bottom-0 right-0 translate-x-1/2"></div>
-        </div>
+            <div class="w-[600px] h-[700px] rounded-full mix-blend-plus-lighter bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
+        </section>
     </div>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let isScrolling;
+            let viewportHeight = window.innerHeight;
+        
+            const snapToSection = () => {
+                const currentScroll = window.scrollY;
+                const nearestSectionIndex = Math.round(currentScroll / viewportHeight);
+                window.scrollTo({ top: nearestSectionIndex * viewportHeight, behavior: 'smooth' });
+            };
+        
+            const handleScroll = () => {
+                clearTimeout(isScrolling);
+                isScrolling = setTimeout(snapToSection, 150); // Reduced debounce time for faster snapping
+            };
+        
+            window.addEventListener('resize', () => {
+                viewportHeight = window.innerHeight;
+            });
+        
+            window.addEventListener('wheel', handleScroll);
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                    handleScroll();
+                }
+            });
+        
+            let startY;
+            window.addEventListener('touchstart', (event) => {
+                startY = event.touches[0].clientY;
+            });
+        
+            window.addEventListener('touchend', (event) => {
+                const endY = event.changedTouches[0].clientY;
+                if (Math.abs(startY - endY) > 50) {
+                    handleScroll();
+                }
+            });
+        });
+
+
         function scrollToBottom(pixels, duration) {
             const startPosition = window.pageYOffset;
             const targetPosition = startPosition + pixels;
