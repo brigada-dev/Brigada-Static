@@ -203,6 +203,30 @@
             <div class="w-[600px] h-[700px] rounded-full mix-blend-plus-lighter bg-[#2E008E] blur-[100px] absolute bottom-[-200px] right-[-200px]"></div>
         </section>
     </div>
+    <div x-show="active === 'Contact'" x-transition.delay.1000ms class="flex flex-col overflow-hidden main">
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
+            <p class="text-[#837BE1] text-[24px] font-medium mb-4">Philosophy</p>
+            <h2 class="text-white text-[100px] text-center 2xl:text-[128px] font-medium tracking-tighter leading-[100%]">As straightforward as it gets, with no compromise.</h2>
+            <img class="mt-[-20px]" src="./IMG.png" alt="random img lol" title="random img lol (ask the designer)">
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center flex-col">
+            <p class="bg-gray-300 bg-gradient-to-br from-gray-300 to-gray-800 bg-clip-text text-transparent text-[24px] font-medium mb-4">Email Us</p>
+            <div class="relative">
+                <h2 class="text-white text-[100px] text-center 2xl:text-[128px] font-medium tracking-tighter leading-[100%]">admin@brigada.dev</h2>
+                <div class="w-[110%] h-[120%] gradient-circle blur-[4px] rounded-full absolute top-0 right-0 mix-blend-darken"></div>
+            </div>
+        </section>
+        <section class="w-[100vw] h-[100vh] flex justify-center items-center flex-col relative">
+            <div class="absolute bottom-0 flex flex-col justify-center items-center">
+                <p class="text-white text-[24px] font-medium mb-4">Get in touch.</p>
+                <h2 class="text-white mb-[100px] text-[100px] text-center 2xl:text-[128px] font-medium tracking-tighter leading-[100%]">Let’s Work Together.</h2>
+                <div class="relative">
+                    <img class="max-w-[80vw]" src="./dev.png">
+                    <img class="absolute blur-[100px] z-[-1] bottom-0" src="blur.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let isScrolling;
